@@ -1639,3 +1639,40 @@ button,
 ::-ms-expand {
     display: none;
 }
+
+/* МЯГКОЕ УДАЛЕНИЕ ГРАНИЦ (СОХРАНЯЕТ ВИЗУАЛЬНЫЕ ОТСТУПЫ) */
+
+/* Убираем только явные границы и тени */
+.invitation-section,
+.schedule-section,
+.dresscode-section,
+.guest-section,
+.wishes-section,
+.timer-section,
+.wedding-footer {
+    border: none;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* Убираем специальные наложения */
+.dresscode-section,
+.guest-section,
+.wishes-section {
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.dresscode-section::before,
+.dresscode-section::after,
+.wishes-section::before,
+.wishes-section::after {
+    display: none;
+}
+
+/* Сохраняем внутренние отступы, но убираем внешние */
+section, footer {
+    margin-left: 0;
+    margin-right: 0;
+}
